@@ -1,0 +1,40 @@
+1-savol
+
+1.WhileLoop- while loop shart berildai shart to'g'ri bulsa  tanaga
+  tushadi va shartga asosan qiymat bitaga oshadi. WhileLoop tugash sharti nomalum bulsaishlatish tavsiya etiladi.
+
+ 2-savol
+
+ 2. ota classni BAZI BIR FEILDALRI bola classda ishlamsligi mumkin bu esa inhertenceda muomoni ko'rsatib beradi.
+  Bu muomoni hal qilish uchun Mixin classini hosil qilishimiz kerak buladi bu esa. Mixin classga tegmagan holda classlarga
+  method qusha oladi,
+  hosil qilish
+
+
+  mixin className on ExtendClassName{
+  dataType methodName(){};
+  }
+
+  class Animals{
+  void eat(){
+  print("Animal eating");
+  };
+  }
+  mixin Foot on Animals {
+  void twoFoot(){
+  };
+  }
+
+  class Kengroo extend Animals with Foot{}
+
+
+  void main(){
+  Kengroo kengroo= Kengroo();
+  kengroo.eat();
+  kengroo.twoFoot();
+  }
+
+
+
+  bunda on kalit so'zi bola class faqat ota ExtendClassName class
+  nomi ishlatilganda ishlaydigan buladi.
