@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled2/pages/pages_1.dart';
 
 class MyHomePageTwo extends StatefulWidget {
   const MyHomePageTwo({super.key});
@@ -26,7 +27,10 @@ class _MyHomePageTwoState extends State<MyHomePageTwo> {
               Row(
                 children: [
                   IconButton(
-                    onPressed: () {debugPrint("onPressed : arrow_left");},
+                    onPressed: () {debugPrint("onPressed : arrow_left");
+                    navBarOne(context);
+
+                      },
                     icon: const Icon(
                       CupertinoIcons.arrow_left,
                       size: 27,
@@ -188,5 +192,8 @@ class _MyHomePageTwoState extends State<MyHomePageTwo> {
     );
   }
 }
-
+void navBarOne(BuildContext context) => Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const MyHomePageOne()),
+);
 

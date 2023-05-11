@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled2/pages/pages_2.dart';
 
 class MyHomePageOne extends StatefulWidget {
   const MyHomePageOne({super.key});
@@ -112,6 +113,7 @@ class _MyHomePageOneState extends State<MyHomePageOne> {
                     GestureDetector(
                       onTap: (){
                         debugPrint("onTap : images");
+                        navBarTwo(context);
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width,
@@ -170,7 +172,10 @@ class _NavBarState extends State<NavBar> {
     return NavigationBar(destinations:[]);
   }
 }
-
+void navBarTwo(BuildContext context) => Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => const MyHomePageTwo()),
+);
 
 
 
